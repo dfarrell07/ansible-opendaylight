@@ -1,3 +1,5 @@
 ---
 - include: add_odl_yum_repo.yml
   when: ansible_os_family == 'RedHat'
+- include: install_odl_rpm.yml
+  when: ansible_os_family == 'RedHat'
