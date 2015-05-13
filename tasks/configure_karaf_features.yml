@@ -1,0 +1,6 @@
+- name: Configure ODL Karaf features
+  template:
+    src=org.apache.karaf.features.cfg
+    dest=/opt/opendaylight/etc/
+    owner=odl
+    group=odl
