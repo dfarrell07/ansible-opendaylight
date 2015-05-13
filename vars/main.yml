@@ -1,2 +1,24 @@
 ---
-# vars file for opendaylight
+# Default variables for the OpenDaylight role. Override as needed.
+
+# The set of Karaf features installed by default in ODL's release artifact.
+# You likely don't need to override these. With only these, you'll be
+# able to connect to a Karaf shell and poke around ODL, including
+# potentially manually installing features, but that's about it.
+# It's better to avoid that manual step by overriding the extra_features
+# list with the additional ODL features required by your use-case.
+default_features:
+  - 'config'
+  - 'standard'
+  - 'region'
+  - 'package'
+  - 'kar'
+  - 'ssh'
+  - 'management'
+
+# Karaf features to install *in addition* to the default_features list.
+# You will likely need to override this. The features you choose will
+# be determined by your use-case. You'll be able to get a Karaf
+# shell and poke around without any extras, but manually connecting to
+# CLIs is an anti-goal for CI/CD and automated deployments generally.
+extra_features: []
