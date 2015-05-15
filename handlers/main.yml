@@ -1,2 +1,3 @@
 ---
-# handlers file for opendaylight
+- include: restart_odl.yml
+  when: ansible_os_family == 'RedHat'
