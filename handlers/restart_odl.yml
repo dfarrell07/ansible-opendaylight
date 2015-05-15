@@ -1,0 +1,4 @@
+- name: Restart ODL
+  service:
+    name=opendaylight
+    state=restarted
