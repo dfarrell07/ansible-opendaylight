@@ -4,3 +4,5 @@
     dest=/opt/opendaylight/etc/
     owner=odl
     group=odl
+  notify:
+    - Restart ODL
