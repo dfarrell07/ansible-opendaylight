@@ -1,0 +1,8 @@
+- name: Configure ODL NB REST port
+  template:
+    src=tomcat-server.xml
+    dest=/opt/opendaylight/configuration/tomcat-server.xml
+    owner=odl
+    group=odl
+  notify:
+    - Restart ODL
