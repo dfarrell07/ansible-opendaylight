@@ -1,6 +1,6 @@
 # OpenDaylight Ansible Role
 
-Ansible role for the [OpenDaylight SDN controller](http://www.opendaylight.org/project/technical-overview).
+Ansible role for the [OpenDaylight SDN controller][1].
 
 **This project is new and under construction. See our [issue tracker](https://github.com/dfarrell07/ansible-opendaylight/issues) for details.**
 
@@ -38,6 +38,11 @@ The OpenDaylight Ansible role is Open Sourced under a BSD two-clause license. Co
 
 ## Author Information
 
-[Daniel Farrell](https://twitter.com/dfarrell07) of the [OpenDaylight Integration Team](https://wiki.opendaylight.org/view/CrossProject:Integration_Group) is the main developer of this module.
+[Daniel Farrell][2] of the [OpenDaylight Integration Team][3] is the main developer of this role.
 
 Please raise [issues](https://github.com/dfarrell07/ansible-opendaylight/issues) to ask questions, request features, report bugs or otherwise contribute. Please avoid 1-1 communication, as Open Source projects benefit from public, documented communication.
+
+
+[1]: http://www.opendaylight.org/project/technical-overview
+[2]: https://twitter.com/dfarrell07
+[3]: https://wiki.opendaylight.org/view/CrossProject:Integration_Group
