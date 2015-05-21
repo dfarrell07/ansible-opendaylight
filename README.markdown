@@ -16,6 +16,10 @@ To set extra Karaf features to be installed at OpenDaylight start time, pass the
 
 OpenDaylight normally installs a default set of Karaf features at boot. They are recommended, so the ODL Puppet mod defaults to installing them. This can be customized by overriding the `default_features` param. You shouldn't normally need to do so.
 
+### REST API Port
+
+To change the port on which OpenDaylight's northbound listens for REST API calls, use the `odl_rest_port` param. This was added because OpenStack's Swift project uses a conflicting port.
+
 ## Dependencies
 
 The OpenDaylight Ansible role doesn't depend on any other Ansible roles.
