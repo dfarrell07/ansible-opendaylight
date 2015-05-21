@@ -24,7 +24,7 @@ The OpenDaylight Ansible role doesn't depend on any other Ansible roles.
 
 The simple example playbook below would install and configure OpenDaylight using this role.
 
-```
+```yaml
 ---
 - hosts: example_host
   sudo: yes
