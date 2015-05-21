@@ -22,3 +22,7 @@ default_features:
 # shell and poke around without any extras, but manually connecting to
 # CLIs is an anti-goal for CI/CD and automated deployments generally.
 extra_features: []
+
+# Specifies the port for the ODL northbound REST interface to listen on.
+# This was added because OpenStack's Swift project uses a conflicting port.
+nb_rest_port: 8080
