@@ -38,6 +38,6 @@ The OpenDaylight Ansible role is Open Sourced under a BSD two-clause license. Co
 
 ## Author Information
 
-Daniel Farrell of the OpenDaylight Integration Team is the main developer of this module.
+[Daniel Farrell](https://twitter.com/dfarrell07) of the [OpenDaylight Integration Team](https://wiki.opendaylight.org/view/CrossProject:Integration_Group) is the main developer of this module.
 
 Please raise [issues](https://github.com/dfarrell07/ansible-opendaylight/issues) to ask questions, request features, report bugs or otherwise contribute. Please avoid 1-1 communication, as Open Source projects benefit from public, documented communication.
