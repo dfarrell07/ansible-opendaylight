@@ -1,4 +1,4 @@
-# Contributing to the OpenDaylight Puppet Module
+# Contributing to the OpenDaylight Ansible Role
 
 We work to make contributing easy. Please let us know if you spot something we can do better.
 
@@ -53,15 +53,14 @@ Basics of a pull request:
 Other tips for submitting excellent pull requests:
 * If you'd like to make more than one logically distinct change, please submit them as different pull requests (if they don't depend on each other) or different commits in the same PR (if they do).
 * If your PR contains a number of commits that provide one logical change, please squash them using `git rebase`.
-* Please provide test coverage for your changes.
 * If applicable, please provide documentation updates to reflect your changes.
 
 
-[1]: https://github.com/dfarrell07/puppet-opendaylight/issues
-[2]: https://github.com/dfarrell07/puppet-opendaylight/pulls
-[3]: https://github.com/dfarrell07/puppet-opendaylight/labels/good-for-beginners
-[4]: https://github.com/dfarrell07/puppet-opendaylight/labels/prio%3Ahigh
-[5]: https://github.com/dfarrell07/puppet-opendaylight/labels/prio%3Anormal
+[1]: https://github.com/dfarrell07/ansible-opendaylight/issues
+[2]: https://github.com/dfarrell07/ansible-opendaylight/pulls
+[3]: https://github.com/dfarrell07/ansible-opendaylight/labels/good-for-beginners
+[4]: https://github.com/dfarrell07/ansible-opendaylight/labels/prio%3Ahigh
+[5]: https://github.com/dfarrell07/ansible-opendaylight/labels/prio%3Anormal
 [6]: https://help.github.com/articles/closing-issues-via-commit-messages/
 [8]: http://chris.beams.io/posts/git-commit/
 [9]: http://cdn3.volusion.com/74gtv.tjme9/v/vspfiles/photos/Delicious%20Dozen-1.jpg
