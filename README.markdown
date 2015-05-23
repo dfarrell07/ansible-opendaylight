@@ -12,13 +12,13 @@ The OpenDaylight Ansible role handles the installation and configuration of all 
 
 ### Karaf Features
 
-To set extra Karaf features to be installed at OpenDaylight start time, pass them in a list to the `extra_features` param. The extra features you pass will typically be driven by the requirements of your ODL install. You'll almost certainly need to pass some.
+To set extra Karaf features to be installed at OpenDaylight start time, pass them in a list to the `extra_features` variable. The extra features you pass will typically be driven by the requirements of your ODL install. You'll almost certainly need to pass some.
 
-OpenDaylight normally installs a default set of Karaf features at boot. They are recommended, so the ODL Puppet mod defaults to installing them. This can be customized by overriding the `default_features` param. You shouldn't normally need to do so.
+OpenDaylight normally installs a default set of Karaf features at boot. They are recommended, so the ODL Ansible role defaults to installing them. This can be customized by overriding the `default_features` variable. You shouldn't normally need to do so.
 
 ### REST API Port
 
-To change the port on which OpenDaylight's northbound listens for REST API calls, use the `odl_rest_port` param. This was added because OpenStack's Swift project uses a conflicting port.
+To change the port on which OpenDaylight's northbound listens for REST API calls, use the `odl_rest_port` variable. This was added because OpenStack's Swift project uses a conflicting port.
 
 ## Dependencies
 
@@ -44,9 +44,10 @@ The OpenDaylight Ansible role is Open Sourced under a BSD two-clause license. Co
 
 [Daniel Farrell][2] of the [OpenDaylight Integration Team][3] is the main developer of this role.
 
-Please raise [issues](https://github.com/dfarrell07/ansible-opendaylight/issues) to ask questions, request features, report bugs or otherwise contribute. Please avoid 1-1 communication, as Open Source projects benefit from public, documented communication.
+See [CONTRIBUTING.markdown][4] for details about how to contribute to the OpenDaylight Ansible role.
 
 
 [1]: http://www.opendaylight.org/project/technical-overview
 [2]: https://twitter.com/dfarrell07
 [3]: https://wiki.opendaylight.org/view/CrossProject:Integration_Group
+[4]: https://github.com/dfarrell07/puppet-opendaylight/blob/master/CONTRIBUTING.markdown
