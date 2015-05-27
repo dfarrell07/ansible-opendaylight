@@ -1,0 +1,4 @@
+- name: Stop ODL
+  service:
+    name=opendaylight
+    state=stopped
