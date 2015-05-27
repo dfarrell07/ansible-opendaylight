@@ -1,3 +1,6 @@
 ---
-- include: restart_odl.yml
+- include: stop_odl.yml
+  when: ansible_os_family == 'RedHat'
+- include: cleanup_karaf.yml
+- include: start_odl.yml
   when: ansible_os_family == 'RedHat'
