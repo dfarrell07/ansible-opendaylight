@@ -5,4 +5,5 @@
     owner=odl
     group=odl
   notify:
-    - Restart ODL
+    - Stop ODL
+    - Start ODL
