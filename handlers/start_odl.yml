@@ -1,0 +1,4 @@
+- name: Start ODL
+  service:
+    name=opendaylight
+    state=started
