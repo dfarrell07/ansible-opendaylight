@@ -5,4 +5,6 @@
     owner=odl
     group=odl
   notify:
-    - Restart ODL
+    - Stop ODL
+    - Cleanup Karaf
+    - Start ODL
