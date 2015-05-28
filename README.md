@@ -44,10 +44,10 @@ The OpenDaylight Ansible role is Open Sourced under a BSD two-clause license. Co
 
 [Daniel Farrell][2] of the [OpenDaylight Integration Team][3] is the main developer of this role.
 
-See [CONTRIBUTING.markdown][4] for details about how to contribute to the OpenDaylight Ansible role.
+See [CONTRIBUTING.md][4] for details about how to contribute to the OpenDaylight Ansible role.
 
 
 [1]: http://www.opendaylight.org/project/technical-overview
 [2]: https://twitter.com/dfarrell07
 [3]: https://wiki.opendaylight.org/view/CrossProject:Integration_Group
-[4]: https://github.com/dfarrell07/puppet-opendaylight/blob/master/CONTRIBUTING.markdown
+[4]: https://github.com/dfarrell07/ansible-opendaylight/blob/master/CONTRIBUTING.md
