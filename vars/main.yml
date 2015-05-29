@@ -1,6 +1,14 @@
 ---
 # Default variables for the OpenDaylight role. Override as needed.
 
+# The point of defining default_* and extra_* lists (like default_features
+# and extra_features), instead of using one common list (like a features
+# list, with the two aggregated) is to simplify the user experience.
+# From a playbook using this role, overriding an empty extra_* list and
+# ignoring the boring default_* counterpart is easier than appending
+# to a common list or enumerating both the ODL-required defaults and the
+# extras you actually care about.
+
 # The set of Karaf features installed by default in ODL's release artifact.
 # You likely don't need to override these. With only these, you'll be
 # able to connect to a Karaf shell and poke around ODL, including
@@ -26,3 +34,18 @@ extra_features: []
 # Specifies the port for the ODL northbound REST interface to listen on.
 # This was added because OpenStack's Swift project uses a conflicting port.
 nb_rest_port: 8080
+
+# Karaf feature repositories configured by default in ODL's release arifact.
+# You likely don't need to override these. Override the extra_feature_repos
+# list to add custom repos to search for Karaf features.
+default_feature_repos:
+  - 'mvn:org.apache.karaf.features/standard/3.0.1/xml/features'
+  - 'mvn:org.apache.karaf.features/enterprise/3.0.1/xml/features'
+  - 'mvn:org.ops4j.pax.web/pax-web-features/3.1.0/xml/features'
+  - 'mvn:org.apache.karaf.features/spring/3.0.1/xml/features'
+  - 'mvn:org.opendaylight.integration/features-integration/0.2.3-Helium-SR3/xml/features'
+
+# Karaf feature repositories to install *in addition* to the defaults repos
+# configured in the ODL release artifact. You may need to override this to
+# configure additional repos to search for Karaf features.
+extra_feature_repos: []
