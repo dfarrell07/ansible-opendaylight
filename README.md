@@ -36,6 +36,24 @@ The simple example playbook below would install and configure OpenDaylight using
     - opendaylight
 ```
 
+To override default settings, pass variables to the `opendaylight` role.
+
+```yaml
+---
+- hosts: all
+  sudo: yes
+  roles:
+    - { role: opendaylight, extra_features: ['odl-ovsdb-openstack'] }
+```
+
+Results in:
+
+```
+opendaylight-user@root>feature:list | grep odl-ovsdb-openstack
+odl-ovsdb-openstack                   | 1.0.3-Helium-SR3    | x         | ovsdb-1.0.3-Helium-SR3                   | OpenDaylight :: OVSDB :: OpenStack Network Virtual
+```
+
+
 ## License
 
 The OpenDaylight Ansible role is Open Sourced under a BSD two-clause license. Contributions encouraged!
