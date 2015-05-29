@@ -20,7 +20,7 @@ OpenDaylight normally installs a default set of Karaf features at boot. They are
 
 To configure additional repos to search for Karaf features, override the `extra_feature_repos` variable.
 
-OpenDaylight comes with a pre-configured st of Karaf feature repos. They are recommended, so the ODL Ansible role defaults to installing them. This can be customized by overriding the `default_features` variable. You shouldn't normally need to do so.
+OpenDaylight comes with a pre-configured set of Karaf feature repos. They are recommended, so the ODL Ansible role defaults to installing them. This can be customized by overriding the `default_features` variable. You shouldn't normally need to do so.
 
 ### REST API Port
 
