@@ -5,3 +5,7 @@
     owner=odl
     group=odl
     mode=0644
+  notify:
+    - Stop ODL
+    - Cleanup Karaf
+    - Start ODL
