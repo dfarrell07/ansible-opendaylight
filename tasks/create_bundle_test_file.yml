@@ -1,0 +1,7 @@
+- name: Create bundle test file
+  copy:
+    src=jolokia-osgi-1.1.4-features.xml
+    dest=/opt/opendaylight/system/org/jolokia/jolokia-osgi/1.1.4/
+    owner=odl
+    group=odl
+    mode=0644
