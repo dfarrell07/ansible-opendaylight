@@ -6,6 +6,5 @@
 - include: configure_karaf_features.yml
 - include: configure_nb_rest_port.yml
 - include: open_nb_rest_port.yml
-- include: create_bundle_test_file.yml
 - include: start_odl_systemd_service.yml
   when: ansible_os_family == 'RedHat'
