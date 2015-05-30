@@ -26,6 +26,8 @@ OpenDaylight comes with a pre-configured set of Karaf feature repos. They are re
 
 To change the port on which OpenDaylight's northbound listens for REST API calls, use the `odl_rest_port` variable. This was added because OpenStack's Swift project uses a conflicting port.
 
+The Ansible role will handle opening this port in FirewallD if it's active.
+
 ## Dependencies
 
 The OpenDaylight Ansible role doesn't depend on any other Ansible roles.
