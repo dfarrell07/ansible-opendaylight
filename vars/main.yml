@@ -49,3 +49,18 @@ default_feature_repos:
 # configured in the ODL release artifact. You may need to override this to
 # configure additional repos to search for Karaf features.
 extra_feature_repos: []
+
+# Method to install ODL
+# Valid options:
+#   rpm_repo: Install ODL using its Yum repo config
+#   rpm_path: Install ODL from a local path or remote URL
+install_method: "rpm_repo"
+
+# This will be passed as the `name` param to the Ansible `yum` module.
+# Docs for `name` param: "You can also pass a url or a local path to a rpm file."
+# http://docs.ansible.com/ansible/yum_module.html
+# NB: Local paths must be relative the host being configured (think `/vagrant`)
+# Defaulting to the latest available RPM, hosted remotely via Fedora Copr
+# NB: This will (hopefully) change soon to point at the CentOS NFV SIG's
+#   Koji repo on the CentOS Community Build System (CBS).
+rpm_path: "https://copr-be.cloud.fedoraproject.org/results/dfarrell07/OpenDaylight/epel-7-x86_64/opendaylight-0.2.3-2/opendaylight-0.2.3-2.el7.centos.noarch.rpm"

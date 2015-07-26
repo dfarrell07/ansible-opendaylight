@@ -1,0 +1,5 @@
+---
+- name: Install ODL via RPM path
+  yum:
+    name={{ rpm_path }}
+    state=present

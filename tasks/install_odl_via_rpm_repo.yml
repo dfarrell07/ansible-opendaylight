@@ -1,0 +1,8 @@
+---
+- include: add_odl_yum_repo.yml
+
+- name: Install ODL via RPM repo
+  yum:
+    name=opendaylight
+    state=present
+    update_cache=yes

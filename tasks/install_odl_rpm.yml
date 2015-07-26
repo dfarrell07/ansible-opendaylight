@@ -1,5 +1,0 @@
-- name: Install ODL RPM
-  yum:
-    name=opendaylight
-    state=present
-    update_cache=yes

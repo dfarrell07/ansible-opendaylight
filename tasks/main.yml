@@ -1,6 +1,8 @@
 ---
-- include: add_odl_yum_repo.yml
-- include: install_odl_rpm.yml
+- include: install_odl_via_rpm_repo.yml
+  when: install_method == "rpm_repo"
+- include: install_odl_via_rpm_path.yml
+  when: install_method == "rpm_path"
 - include: configure_karaf_features.yml
 - include: configure_nb_rest_port.yml
 - include: open_nb_rest_port.yml
