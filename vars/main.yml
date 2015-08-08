@@ -33,17 +33,17 @@ extra_features: []
 
 # Specifies the port for the ODL northbound REST interface to listen on.
 # This was added because OpenStack's Swift project uses a conflicting port.
-nb_rest_port: 8080
+nb_rest_port: 8282
 
 # Karaf feature repositories configured by default in ODL's release arifact.
 # You likely don't need to override these. Override the extra_feature_repos
 # list to add custom repos to search for Karaf features.
 default_feature_repos:
-  - 'mvn:org.apache.karaf.features/standard/3.0.1/xml/features'
-  - 'mvn:org.apache.karaf.features/enterprise/3.0.1/xml/features'
-  - 'mvn:org.ops4j.pax.web/pax-web-features/3.1.0/xml/features'
-  - 'mvn:org.apache.karaf.features/spring/3.0.1/xml/features'
-  - 'mvn:org.opendaylight.integration/features-integration/0.2.3-Helium-SR3/xml/features'
+  - 'mvn:org.apache.karaf.features/standard/3.0.3/xml/features'
+  - 'mvn:org.apache.karaf.features/enterprise/3.0.3/xml/features'
+  - 'mvn:org.ops4j.pax.web/pax-web-features/3.1.4/xml/features'
+  - 'mvn:org.apache.karaf.features/spring/3.0.3/xml/features'
+  - 'mvn:org.opendaylight.integration/features-integration-index/0.3.0-Lithium/xml/features'
 
 # Karaf feature repositories to install *in addition* to the defaults repos
 # configured in the ODL release artifact. You may need to override this to
@@ -60,7 +60,5 @@ install_method: "rpm_repo"
 # Docs for `name` param: "You can also pass a url or a local path to a rpm file."
 # http://docs.ansible.com/ansible/yum_module.html
 # NB: Local paths must be relative the host being configured (think `/vagrant`)
-# Defaulting to the latest available RPM, hosted remotely via Fedora Copr
-# NB: This will (hopefully) change soon to point at the CentOS NFV SIG's
-#   Koji repo on the CentOS Community Build System (CBS).
-rpm_path: "https://copr-be.cloud.fedoraproject.org/results/dfarrell07/OpenDaylight/epel-7-x86_64/opendaylight-0.2.3-2/opendaylight-0.2.3-2.el7.centos.noarch.rpm"
+# Defaulting to the Lithium RPM hosted on the CentOS Community Build System
+rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-3-candidate/x86_64/os/Packages/opendaylight-3.0.0-2.el7.noarch.rpm"

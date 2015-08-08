@@ -73,7 +73,7 @@ Results in:
 
 ```
 opendaylight-user@root>feature:list | grep odl-ovsdb-openstack
-odl-ovsdb-openstack | 1.0.3-Helium-SR3 | x | ovsdb-1.0.3-Helium-SR3 <snip>
+odl-ovsdb-openstack | 1.1.0-Lithium | x | ovsdb-1.1.0-Lithium <snip>
 ```
 
 ## License
