@@ -1,7 +1,7 @@
 - name: Configure ODL NB REST port
   template:
-    src=tomcat-server.xml
-    dest=/opt/opendaylight/configuration/tomcat-server.xml
+    src=jetty.xml
+    dest=/opt/opendaylight/etc/jetty.xml
     owner=odl
     group=odl
   notify:

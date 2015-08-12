@@ -33,7 +33,7 @@ extra_features: []
 
 # Specifies the port for the ODL northbound REST interface to listen on.
 # This was added because OpenStack's Swift project uses a conflicting port.
-nb_rest_port: 8282
+nb_rest_port: 8080
 
 # Karaf feature repositories configured by default in ODL's release arifact.
 # You likely don't need to override these. Override the extra_feature_repos
