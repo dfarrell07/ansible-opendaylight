@@ -1,11 +1,15 @@
+---
+- include: is_systemd_installed.yml
+
 - name: Check if FirewallD service is running
   command: systemctl is-active firewalld
   failed_when: firewalld_status.stdout not in ['unknown', 'active']
   changed_when: false
   register: firewalld_status
+  when: systemd_installed.rc == 0
 
 - name: Open ODL NB REST port via FirewallD
-  when: firewalld_status.stdout == 'active'
+  when: systemd_installed.rc == 0 and firewalld_status.stdout == 'active'
   firewalld:
     port={{ nb_rest_port }}/tcp
     state=enabled

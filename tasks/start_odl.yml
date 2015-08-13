@@ -1,7 +1,5 @@
 ---
-- name: Check if systemd is installed
-  command: rpm -q systemd
-  register: systemd_installed
+- include: is_systemd_installed.yml
 
 - include: start_odl_systemd_service.yml
-  when: systemd_installed.rc == 1
+  when: systemd_installed.rc == 0
