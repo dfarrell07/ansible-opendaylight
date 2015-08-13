@@ -1,4 +1,5 @@
 - name: Start ODL
+  when: systemd_installed.rc == 0
   service:
     name=opendaylight
     state=started
