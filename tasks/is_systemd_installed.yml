@@ -1,5 +1,6 @@
 ---
 - name: Check if systemd is installed
   command: rpm -q systemd
+  failed_when: systemd_installed.rc not in [0, 1]
   changed_when: false
   register: systemd_installed

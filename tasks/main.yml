@@ -6,5 +6,4 @@
 - include: configure_karaf_features.yml
 - include: configure_nb_rest_port.yml
 - include: open_nb_rest_port.yml
-- include: start_odl_systemd_service.yml
 - include: start_odl.yml
