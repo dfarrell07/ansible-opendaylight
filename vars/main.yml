@@ -57,8 +57,9 @@ extra_feature_repos: []
 install_method: "rpm_repo"
 
 # This will be passed as the `name` param to the Ansible `yum` module.
-# Docs for `name` param: "You can also pass a url or a local path to a rpm file."
-# http://docs.ansible.com/ansible/yum_module.html
+# `name` param docs: "You can also pass a url or a local path to a rpm file."
+#   See: http://docs.ansible.com/ansible/yum_module.html
 # NB: Local paths must be relative the host being configured (think `/vagrant`)
+# NB: This will only take effect when `install_method` is "rpm_path"
 # Defaulting to the Lithium RPM hosted on the CentOS Community Build System
 rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-3-candidate/x86_64/os/Packages/opendaylight-3.0.0-2.el7.noarch.rpm"
