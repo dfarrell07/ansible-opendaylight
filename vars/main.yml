@@ -43,7 +43,7 @@ default_feature_repos:
   - 'mvn:org.apache.karaf.features/enterprise/3.0.3/xml/features'
   - 'mvn:org.ops4j.pax.web/pax-web-features/3.1.4/xml/features'
   - 'mvn:org.apache.karaf.features/spring/3.0.3/xml/features'
-  - 'mvn:org.opendaylight.integration/features-integration-index/0.3.2-Lithium-SR2/xml/features'
+  - 'mvn:org.opendaylight.integration/features-integration-index/0.3.3-Lithium-SR3/xml/features'
 
 # Karaf feature repositories to install *in addition* to the defaults repos
 # configured in the ODL release artifact. You may need to override this to
