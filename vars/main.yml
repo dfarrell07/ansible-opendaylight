@@ -62,4 +62,4 @@ install_method: "rpm_repo"
 # NB: Local paths must be relative the host being configured (think `/vagrant`)
 # NB: This will only take effect when `install_method` is "rpm_path"
 # Defaulting to the Lithium RPM hosted on the CentOS Community Build System
-rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-3-candidate/x86_64/os/Packages/opendaylight-3.0.0-2.el7.noarch.rpm"
+rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-33-release/x86_64/os/Packages/opendaylight-3.3.0-2.el7.noarch.rpm"
