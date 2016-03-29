@@ -1,3 +1,7 @@
+- name: Debug RPM repo URL
+  debug:
+    msg=rpm_repo_url:{{ rpm_repo_url }}
+
 - name: Download ODL yum repo
   get_url:
     url={{ rpm_repo_url }}
@@ -8,3 +12,12 @@
     owner=root
     group=root
     mode=0644
+
+- name: Cat RPM repo file to stdout
+  command: cat /etc/yum.repos.d/{{ rpm_repo_file }}
+  changed_when: false
+  register: rpm_repo_file_contents
+
+- name: Debug RPM repo contents
+  debug:
+    msg=rpm_repo_file_contents:"{{ rpm_repo_file_contents.stdout }}"
