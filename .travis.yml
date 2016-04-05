@@ -1,5 +1,6 @@
 ---
-script: tox
+language: python
+script: tox -vv
 notifications:
     email:
         recipients:
