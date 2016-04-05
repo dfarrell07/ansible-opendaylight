@@ -1,3 +1,5 @@
+[![CI Status][7]][6]
+
 # OpenDaylight Ansible Role
 
 Ansible role for the [OpenDaylight SDN controller][1].
@@ -86,3 +88,5 @@ OpenDaylight Ansible role.
 [3]: https://wiki.opendaylight.org/view/CrossProject:Integration_Group
 [4]: https://github.com/dfarrell07/ansible-opendaylight/blob/master/CONTRIBUTING.md
 [5]: https://galaxy.ansible.com/list#/roles/3948
+[6]: https://travis-ci.org/dfarrell07/ansible-opendaylight
+[7]: https://travis-ci.org/dfarrell07/ansible-opendaylight.svg
