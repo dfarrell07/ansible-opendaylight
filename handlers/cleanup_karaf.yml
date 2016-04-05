@@ -1,2 +1,4 @@
 - name: Cleanup Karaf
-  command: rm -rf /opt/opendaylight/data
+  file:
+    path=/opt/opendaylight/data
+    state=absent
