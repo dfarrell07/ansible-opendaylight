@@ -1,4 +1,5 @@
 ---
+language: python
 script: tox -vv
 notifications:
     email:
