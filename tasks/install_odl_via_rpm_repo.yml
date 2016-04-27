@@ -5,4 +5,3 @@
   yum:
     name=opendaylight
     state=present
-    update_cache=yes
