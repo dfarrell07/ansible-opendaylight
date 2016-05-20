@@ -3,7 +3,7 @@
 
 - name: Check if FirewallD service is running
   command: systemctl is-active firewalld
-  failed_when: firewalld_status.stdout not in ['unknown', 'active']
+  failed_when: firewalld_status.stdout != 'unknown' and firewalld_status.stdout != 'active'
   changed_when: false
   register: firewalld_status
   when: in_container.rc == 1
