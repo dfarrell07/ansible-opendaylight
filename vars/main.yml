@@ -43,13 +43,13 @@ install_method: "rpm_repo"
 
 # URL of the .repo config to use when installing ODL from a repo
 # NB: This will only take effect when `install_method` is "rpm_repo"
-rpm_repo_file: "opendaylight-41-release.repo"
-rpm_repo_url: "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-41-release.repo;hb=refs/heads/master"
+rpm_repo_file: "opendaylight-42-release.repo"
+rpm_repo_url: "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-42-release.repo;hb=refs/heads/master"
 
 # This will be passed as the `name` param to the Ansible `yum` module.
 # `name` param docs: "You can also pass a url or a local path to a rpm file."
 #   See: http://docs.ansible.com/ansible/yum_module.html
 # NB: Local paths must be relative the host being configured (think `/vagrant`)
 # NB: This will only take effect when `install_method` is "rpm_path"
-# Default to the Beryllium SR1 RPM hosted on the CentOS Community Build System
-rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-41-release/x86_64/os/Packages/opendaylight-4.0.0-1.el7.noarch.rpm"
+# Default to the Beryllium SR2 RPM hosted on the CentOS Community Build System
+rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-42-release/x86_64/os/Packages/opendaylight-4.2.0-1.el7.noarch.rpm"
