@@ -63,10 +63,8 @@ To override default settings, pass variables to the `opendaylight` role.
 
 Results in:
 
-```
-opendaylight-user@root>feature:list | grep odl-ovsdb-openstack
-odl-ovsdb-openstack | 1.1.0-Lithium | x | ovsdb-1.1.0-Lithium <snip>
-```
+    opendaylight-user@root>feature:list | grep odl-ovsdb-openstack
+    odl-ovsdb-openstack | 1.1.0-Lithium | x | ovsdb-1.1.0-Lithium <snip>
 
 ## License
 
