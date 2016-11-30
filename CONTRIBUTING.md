@@ -39,7 +39,7 @@ Issues can be referenced and manipulated from git commit messages. Just referenc
 
 ###IRC channel
 
-Feel free to join us at **#opendaylight-integration** on `chat.freenode.net`. You can also use web client for Freenode to join us at http://webchat.freenode.net/?channels=opendaylight-integration.
+Feel free to join us at **#opendaylight-integration** on `chat.freenode.net`. You can also use web client for Freenode to join us at [webchat][10].
 
 ## Patches
 
@@ -69,3 +69,4 @@ Other tips for submitting excellent pull requests:
 [6]: https://help.github.com/articles/closing-issues-via-commit-messages/
 [8]: http://chris.beams.io/posts/git-commit/
 [9]: http://cdn3.volusion.com/74gtv.tjme9/v/vspfiles/photos/Delicious%20Dozen-1.jpg
+[10]: http://webchat.freenode.net/?channels=opendaylight-integration
