@@ -1,0 +1,18 @@
+- name: Add the repository key to apt
+  apt_key:
+    url={{ deb_key }}
+    state=present
+
+- name: Add ODL deb repo
+  apt_repository:
+    repo={{ deb_repo_url }}
+    state=present
+    filename='opendaylight'
+    update_cache=yes
+
+- name: Add jessie-backports
+  apt_repository:
+    repo="deb http://httpredir.debian.org/debian jessie-backports main"
+    state=present
+    filename='jessie-backports'
+    update_cache=yes

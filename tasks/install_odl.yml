@@ -1,5 +1,26 @@
 ---
+- name: Debugging
+  debug: msg="{{ ansible_distribution }} {{ ansible_os_family }} {{ ansible_distribution_version }} {{ ansible_distribution_release }} {{ ansible_distribution_major_version }} {{ ansible_lsb.major_release }}"
+
+- set_fact:
+    os="{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.0"
+  when:
+    ansible_distribution == "Debian"
+- set_fact:
+    os="x{{ ansible_distribution }}_{{ ansible_distribution_version }}"
+  when:
+    ansible_distribution == "Ubuntu"
+
+- include: install_odl_via_deb_repo.yml
+  when:
+    - ansible_os_family == "Debian"
+    - install_method == "deb_repo"
+
 - include: install_odl_via_rpm_repo.yml
-  when: install_method == "rpm_repo"
+  when:
+    - ansible_os_family == "CentOS"
+    - install_method == "rpm_repo"
 - include: install_odl_via_rpm_path.yml
-  when: install_method == "rpm_path"
+  when:
+    - ansible_os_family == "CentOS"
+    - install_method == "rpm_path"
