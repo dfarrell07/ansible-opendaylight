@@ -10,9 +10,4 @@
     filename='opendaylight'
     update_cache=yes
 
-- name: Add jessie-backports
-  apt_repository:
-    repo="deb http://httpredir.debian.org/debian jessie-backports main"
-    state=present
-    filename='jessie-backports'
-    update_cache=yes
+- include: add_jessie_backports.yml
