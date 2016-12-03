@@ -3,5 +3,5 @@
 
 - name: Install ODL via Deb path
   apt:
-    deb: "/home/vagrant/opendaylight_5.0.0-1_all.deb"
+    deb: "{{ deb_path }}"
     state: present
