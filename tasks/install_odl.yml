@@ -1,5 +1,47 @@
 ---
+# Check the OS and branch for either RPM or Deb installs
+
+# Docs: 
+# `ansible_os_family` param: Operating System family (Debian/RedHat)
+# `ansible_distribtion` param: Operating system (Debian/Ubuntu/CentOS etc.)
+# `ansible_distribution_version` param: The complete version of the OS
+# `ansible_distribution_major_version` param: The major version of the OS
+
+# The .debs are currently hosted in OpenSUSE Build Service (OBS).
+# In OBS, the name of the .deb repository for Debian contains the OS name
+# in the form Debian_{major_version} (eg: Debian_8.0).
+- set_fact:
+    os="{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.0"
+  when:
+    ansible_distribution == "Debian"
+
+# In OBS, the name of the .deb repository for Ubuntu contains the OS name
+# in the form xUbuntu_{version} (eg: xUbuntu_16.04).
+- set_fact:
+    os="x{{ ansible_distribution }}_{{ ansible_distribution_version }}"
+  when:
+    ansible_distribution == "Ubuntu"
+
+# Install ODL .deb using debian repo
+- include: install_odl_via_deb_repo.yml
+  when:
+    - ansible_os_family == "Debian"
+    - install_method == "deb_repo"
+
+# Install ODL using .deb URL or local path to a .deb file
+- include: install_odl_via_deb_path.yml
+  when:
+    - ansible_os_family == "Debian"
+    - install_method == "deb_path"
+
+# Install ODL using Yum repo config
 - include: install_odl_via_rpm_repo.yml
-  when: install_method == "rpm_repo"
+  when:
+    - ansible_os_family == "RedHat"
+    - install_method == "rpm_repo"
+
+# Install ODL using rpm URL or a local path to a rpm file
 - include: install_odl_via_rpm_path.yml
-  when: install_method == "rpm_path"
+  when:
+    - ansible_os_family == "RedHat"
+    - install_method == "rpm_path"

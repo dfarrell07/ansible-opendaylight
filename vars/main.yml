@@ -39,12 +39,19 @@ nb_rest_port: 8080
 # Valid options:
 #   rpm_repo: Install ODL using its Yum repo config
 #   rpm_path: Install ODL from a local path or remote URL
+#   dep_repo: Install ODL using a debian repository
 install_method: "rpm_repo"
 
 # URL of the .repo config to use when installing ODL from a repo
 # NB: This will only take effect when `install_method` is "rpm_repo"
 rpm_repo_file: "opendaylight-5-release.repo"
 rpm_repo_url: "https://git.opendaylight.org/gerrit/gitweb?p=integration/packaging.git;a=blob_plain;f=rpm/example_repo_configs/opendaylight-5-release.repo;hb=refs/heads/master"
+
+# URL of the deb repository to use when installing ODL from a repo
+# NB: This will only take effect when `install_method` is "deb_repo"
+deb_repo_url: "deb http://download.opensuse.org/repositories/home:/akshitajha/{{ os }}/ /"
+# URL to add the repository key to 'apt'
+deb_key: "http://download.opensuse.org/repositories/home:akshitajha/{{ os }}/Release.key"
 
 # This will be passed as the `name` param to the Ansible `yum` module.
 # `name` param docs: "You can also pass a url or a local path to a rpm file."
@@ -53,3 +60,10 @@ rpm_repo_url: "https://git.opendaylight.org/gerrit/gitweb?p=integration/packagin
 # NB: This will only take effect when `install_method` is "rpm_path"
 # Default to the Boron RPM hosted on the CentOS Community Build System
 rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-5-release/x86_64/os/Packages/opendaylight-4.2.0-1.el7.noarch.rpm"
+
+# This will be passed as the `deb` param to the Ansible `apt` module.
+# `deb` param docs: "Path to a .deb package on the remote machine. If :// in the path,
+#                    ansible will attempt to download deb before installing."
+#   See: http://docs.ansible.com/ansible/apt_module.html
+# This is used when `install_method` is "deb_path"
+deb_path: "http://download.opensuse.org/repositories/home:/akshitajha/{{ os }}/all/opendaylight_5.0.0-1_all.deb"
