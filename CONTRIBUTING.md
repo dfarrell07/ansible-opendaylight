@@ -31,7 +31,7 @@ The labels assigned to an issue can tell you important things about it.
 
 For example, issues tagged [`good-for-beginners`][3] are likely to not require much background knowledge and be fairly self-contained, perfect for people new to the project who are looking to get involved.
 
-The priority-related issue labels ([`prio:high`][4], [`piro:normal`][5]...) are also important to note. They typically accurately reflect the next TODOs the community will complete.
+The priority-related issue labels ([`prio:high`][4], [`prio:normal`][5]...) are also important to note. They typically accurately reflect the next TODOs the community will complete.
 
 The `info:progress` labels may not always be up-to-date, but will be used when appropriate (typically long-standing issues that take multiple commits).
 
