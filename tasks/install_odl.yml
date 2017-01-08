@@ -1,7 +1,7 @@
 ---
 # Check the OS and branch for either RPM or Deb installs
 
-# Docs: 
+# Docs:
 # `ansible_os_family` param: Operating System family (Debian/RedHat)
 # `ansible_distribtion` param: Operating system (Debian/Ubuntu/CentOS etc.)
 # `ansible_distribution_version` param: The complete version of the OS
@@ -10,14 +10,16 @@
 # The .debs are currently hosted in OpenSUSE Build Service (OBS).
 # In OBS, the name of the .deb repository for Debian contains the OS name
 # in the form Debian_{major_version} (eg: Debian_8.0).
-- set_fact:
+- name: Set OS name for .deb repo for Debian in OBS
+  set_fact:
     os="{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.0"
   when:
     ansible_distribution == "Debian"
 
 # In OBS, the name of the .deb repository for Ubuntu contains the OS name
 # in the form xUbuntu_{version} (eg: xUbuntu_16.04).
-- set_fact:
+- name: Set OS name for .deb repo for Ubuntu in OBS
+  set_fact:
     os="x{{ ansible_distribution }}_{{ ansible_distribution_version }}"
   when:
     ansible_distribution == "Ubuntu"
