@@ -4,12 +4,35 @@
 
 Ansible role for the [OpenDaylight SDN controller][1].
 
-Releases of this role can also be installed available via [Ansible Galaxy][5].
+#### Ansible Dependencies: `ansible-galaxy`
 
-## Requirements
+Releases of this role can also be installed available via [Ansible Galaxy][5]
+which ships with Ansible.
 
-The OpenDaylight Ansible role handles the installation and configuration of
-all of its dependences.
+To install the latest version of ansible on RedHat based OSs:
+
+```
+$ sudo yum install -y ansible
+```
+
+To install the latest version of ansible on Debian based OSs:
+
+```
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install -y ansible
+```
+
+#### Ansible Dependencies: Roles
+
+After you install the `ansible-galaxy` tool, point it at the project's
+`requirements.yml` file to install ODL's role.
+
+```
+[~/ansible-opendaylight]$ ansible-galaxy install -r requirements.yml
+```
+
+The OpenDaylight Ansible role doesn't depend on any other Ansible roles.
 
 ## Role Variables
 
@@ -33,9 +56,32 @@ Swift project uses a conflicting port.
 
 The Ansible role will handle opening this port in FirewallD if it's active.
 
-## Dependencies
+### Install Method
 
-The OpenDaylight Ansible role doesn't depend on any other Ansible roles.
+OpenDaylight can be installed either via an RPM or a .deb depending on the operating system.
+For RedHat based OSs, the valid options for `install_method` are `rpm_repo` or `rpm_path`.
+For Debian based OSs, `install_method` can accept either `deb_repo` or `deb_path`.
+
+## Installing OpenDaylight
+
+To install OpenDaylight on your system, you can make use of `ansible-playbook`.
+
+On RedHat based OSs, you can install OpenDaylight from RPM repo (recommended) using
+the playbook `examples/all_defaults_playbook.yml` or from a local/remote path to an ODL rpm via
+`examples/rpm_path_install_playbook.yml`.
+
+```Shellsession
+sudo ansible-playbook -i "localhost," -c local examples/<playbook>
+```
+
+On a Debian based OS, you can install OpenDaylight either from a Debian repo using the
+playbook `examples/deb_repo_install_playbook.yml` or from a local/remote Deb path using
+`examples/deb_path_install_playbook.yml`.
+
+```Shellsession
+sudo ansible-playbook -i "localhost," -c local examples/<playbook>
+```
+You can also use ansible-opendaylight using [Vagrant base box examples of Ansible ODL deployments][8].
 
 ## Example Playbook
 
@@ -58,13 +104,14 @@ To override default settings, pass variables to the `opendaylight` role.
   sudo: yes
   roles:
     - role: opendaylight
-      extra_features: ['odl-ovsdb-openstack']
+      extra_features: ['odl-netvirt-openstack']
 ```
 
 Results in:
 
-    opendaylight-user@root>feature:list | grep odl-ovsdb-openstack
-    odl-ovsdb-openstack | 1.1.0-Lithium | x | ovsdb-1.1.0-Lithium <snip>
+    opendaylight-user@root>feature:list | grep odl-netvirt-openstack
+    odl-netvirt-openstack | <odl-release> | x | odl-netvirt-<odl-release> | OpenDaylight :: NetVirt :: OpenStack
+
 
 ## License
 
@@ -88,3 +135,4 @@ OpenDaylight Ansible role.
 [5]: https://galaxy.ansible.com/list#/roles/3948 "OpenDaylight Ansible role on Ansible Galaxy"
 [6]: https://travis-ci.org/dfarrell07/ansible-opendaylight "OpenDaylight Ansible role Travis CI"
 [7]: https://travis-ci.org/dfarrell07/ansible-opendaylight.svg "Travis CI status image"
+[8]: https://github.com/dfarrell07/vagrant-opendaylight#ansible-deployments "Ansible Vagrant deployment"

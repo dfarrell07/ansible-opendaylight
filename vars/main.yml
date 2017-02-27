@@ -38,8 +38,9 @@ nb_rest_port: 8080
 # Method to install ODL
 # Valid options:
 #   rpm_repo: Install ODL using its Yum repo config
-#   rpm_path: Install ODL from a local path or remote URL
+#   rpm_path: Install ODL rpm from a local path or remote URL
 #   dep_repo: Install ODL using a debian repository
+#   deb_path: Install ODL .deb from a local path or remote URL
 install_method: "rpm_repo"
 
 # URL of the .repo config to use when installing ODL from a repo
