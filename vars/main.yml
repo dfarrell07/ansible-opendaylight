@@ -58,8 +58,8 @@ deb_key: "http://download.opensuse.org/repositories/home:akshitajha/{{ os }}/Rel
 #   See: http://docs.ansible.com/ansible/yum_module.html
 # NB: Local paths must be relative the host being configured (think `/vagrant`)
 # NB: This will only take effect when `install_method` is "rpm_path"
-# Default to the Boron RPM hosted on the CentOS Community Build System
-rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-5-release/x86_64/os/Packages/opendaylight-4.2.0-1.el7.noarch.rpm"
+# Default to the Boron SR2 RPM hosted on the CentOS Community Build System
+rpm_path: "http://cbs.centos.org/repos/nfv7-opendaylight-52-release/x86_64/os/Packages/opendaylight-5.2.0-1.el7.noarch.rpm"
 
 # This will be passed as the `deb` param to the Ansible `apt` module.
 # `deb` param docs: "Path to a .deb package on the remote machine. If :// in the path,
