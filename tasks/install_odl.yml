@@ -22,7 +22,7 @@
   set_fact:
     os="x{{ ansible_distribution }}_{{ ansible_distribution_version }}"
   when:
-    ansible_distribution == "Ubuntu"
+    - ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
 
 # Install ODL .deb using debian repo
 - include: install_odl_via_deb_repo.yml
