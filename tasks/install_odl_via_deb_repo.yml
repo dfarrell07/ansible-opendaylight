@@ -3,5 +3,5 @@
 
 - name: Install ODL via Deb repo
   apt:
-    name=opendaylight
-    state=present
+    name: opendaylight
+    state: present
