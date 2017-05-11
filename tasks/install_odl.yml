@@ -4,25 +4,6 @@
 # Docs:
 # `ansible_os_family` param: Operating System family (Debian/RedHat)
 # `ansible_distribtion` param: Operating system (Debian/Ubuntu/CentOS etc.)
-# `ansible_distribution_version` param: The complete version of the OS
-# `ansible_distribution_major_version` param: The major version of the OS
-
-# The .debs are currently hosted in OpenSUSE Build Service (OBS).
-# In OBS, the name of the .deb repository for Debian contains the OS name
-# in the form Debian_{major_version} (eg: Debian_8.0).
-- name: Set OS name for .deb repo for Debian in OBS
-  set_fact:
-    os="{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.0"
-  when:
-    ansible_distribution == "Debian"
-
-# In OBS, the name of the .deb repository for Ubuntu contains the OS name
-# in the form xUbuntu_{version} (eg: xUbuntu_16.04).
-- name: Set OS name for .deb repo for Ubuntu in OBS
-  set_fact:
-    os="x{{ ansible_distribution }}_{{ ansible_distribution_version }}"
-  when:
-    - ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
 
 # Install ODL .deb using debian repo
 - include: install_odl_via_deb_repo.yml
