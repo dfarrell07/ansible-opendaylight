@@ -1,5 +1,0 @@
----
-- name: Install ODL via RPM path
-  package:
-    name={{ rpm_path }}
-    state=present

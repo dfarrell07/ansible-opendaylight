@@ -1,7 +1,0 @@
----
-- include: add_odl_deb_repo.yml
-
-- name: Install ODL via Deb repo
-  apt:
-    name: opendaylight
-    state: present

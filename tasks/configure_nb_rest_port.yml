@@ -1,9 +1,0 @@
-- name: Configure ODL NB REST port
-  template:
-    src=jetty.xml
-    dest=/opt/opendaylight/etc/jetty.xml
-    owner=odl
-    group=odl
-  notify:
-    - Stop ODL
-    - Start ODL
